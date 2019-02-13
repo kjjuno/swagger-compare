@@ -7,10 +7,13 @@ makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api 
 | License       | [![License MIT][license-badge]][mit-license]                                                        |
 | Circle CI     | [![CircleCI][circleci-build-badge]][circleci-dashboard]                                             |
 | Code Coverage | [![Code Coverage][codecov-badge]][codecov-dashboard]                                                |
+| Documantation | [![Documentation Status][rtd-build-badge]][rtd-latest]
 | NPM           | [![npm version][npm-version-badge]][npm-page] [![npm downloads][npm-downloads-badge]][npm-page]     |
 
 [circleci-build-badge]: https://circleci.com/gh/kjjuno/swagger-compare.svg?style=shield
 [circleci-dashboard]:   https://circleci.com/gh/kjjuno/swagger-compare
+[rtd-build-badge]:      https://readthedocs.org/projects/swagger-compare/badge/?version=latest
+[rtd-latest]:           https://swagger-compare.readthedocs.io/en/latest/
 [codecov-badge]:        https://img.shields.io/codecov/c/github/kjjuno/swagger-compare/master.svg?style=flat
 [codecov-dashboard]:    https://codecov.io/gh/kjjuno/swagger-compare
 [license-badge]:        https://img.shields.io/npm/l/swagger-compare.svg?style=flat
