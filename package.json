@@ -1,0 +1,55 @@
+{
+  "name": "swagger-compare",
+  "version": "0.1.0-alpha.0",
+  "description": "Describes the difference between two versions of a swagger document",
+  "main": "src/swagger-compare.js",
+  "nyc": {
+    "all": true,
+    "check-coverage": false,
+    "per-file": true,
+    "lines": 99,
+    "statements": 99,
+    "functions": 99,
+    "branches": 99,
+    "include": [
+      "src/**/*.js"
+    ],
+    "exclude": [
+      "src/swagger-compare-cli.js"
+    ]
+  },
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "nyc mocha -R mocha-multi-reporters -O configFile=test/mocha.json",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcover && codecov"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjjuno/swagger-compare.git"
+  },
+  "keywords": [
+    "swagger",
+    "compare",
+    "x-replaced-by",
+    "x-remove-on",
+    "deprecation",
+    "versioning"
+  ],
+  "author": "Kevin Johnson",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kjjuno/swagger-compare/issues"
+  },
+  "homepage": "https://github.com/kjjuno/swagger-compare#readme",
+  "devDependencies": {
+    "codecov": "^3.2.0",
+    "mocha": "^5.2.0",
+    "mocha-multi-reporters": "^1.1.7",
+    "nyc": "^13.2.0"
+  },
+  "bin": {
+    "swagger-compare": "src/swagger-compare-cli.js"
+  }
+}
