@@ -2,6 +2,23 @@
 
 makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api changes.
 
+| Platform      | Badges                                                                                              |
+| :------------ | :-------------------------------------------------------------------------------------------------- |
+| License       | [![License MIT][license-badge]][mit-license]                                                        |
+| Circle CI     | [![CircleCI][circleci-build-badge]][circleci-dashboard]                                             |
+| Code Coverage | [![Code Coverage][codecov-badge]][codecov-dashboard]                                                |
+| NPM           | [![npm version][npm-version-badge]][npm-page] [![npm downloads][npm-downloads-badge]][npm-page]     |
+
+[circleci-build-badge]: https://circleci.com/gh/kjjuno/swagger-compare.svg?style=shield
+[circleci-dashboard]:   https://circleci.com/gh/kjjuno/swagger-compare
+[codecov-badge]:        https://img.shields.io/codecov/c/github/kjjuno/swagger-compare/master.svg?style=flat
+[codecov-dashboard]:    https://codecov.io/gh/kjjuno/swagger-compare
+[license-badge]:        https://img.shields.io/npm/l/swagger-compare.svg?style=flat
+[mit-license]:          https://opensource.org/licenses/MIT
+[npm-version-badge]:    https://badge.fury.io/js/swagger-compare.svg
+[npm-downloads-badge]:  https://img.shields.io/npm/dt/swagger-compare.svg?style=flat
+[npm-page]:             https://www.npmjs.com/package/swagger-compare
+
 This tool is currently in the design phase. The goal is to provide a clear and concise way to communicate api changes.
 Ideally this will fit easily within a slack or Teams channel.
 
