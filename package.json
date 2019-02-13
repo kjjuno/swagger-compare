@@ -5,7 +5,7 @@
   "main": "src/swagger-compare.js",
   "nyc": {
     "all": true,
-    "check-coverage": false,
+    "check-coverage": true,
     "per-file": true,
     "lines": 99,
     "statements": 99,
@@ -51,5 +51,10 @@
   },
   "bin": {
     "swagger-compare": "src/swagger-compare-cli.js"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "diff": "^4.0.1",
+    "js-yaml": "^3.12.1"
   }
 }
