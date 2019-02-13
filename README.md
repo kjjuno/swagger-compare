@@ -4,7 +4,7 @@ makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api 
 
 | Platform      | Badges                                                                                              |
 | :------------ | :-------------------------------------------------------------------------------------------------- |
-| License       | [![License MIT][license-badge]][mit-license]                                                        |
+| License       | [![GitHub license][license-badge]][license-url]                                                     |
 | Circle CI     | [![CircleCI][circleci-build-badge]][circleci-dashboard]                                             |
 | Code Coverage | [![Code Coverage][codecov-badge]][codecov-dashboard]                                                |
 | Documantation | [![Documentation Status][rtd-build-badge]][rtd-latest]
@@ -16,8 +16,8 @@ makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api 
 [rtd-latest]:           https://swagger-compare.readthedocs.io/en/latest/
 [codecov-badge]:        https://img.shields.io/codecov/c/github/kjjuno/swagger-compare/master.svg?style=flat
 [codecov-dashboard]:    https://codecov.io/gh/kjjuno/swagger-compare
-[license-badge]:        https://img.shields.io/npm/l/swagger-compare.svg?style=flat
-[mit-license]:          https://opensource.org/licenses/MIT
+[license-badge]:        https://img.shields.io/github/license/kjjuno/swagger-compare.svg
+[license-url]:          https://github.com/kjjuno/swagger-compare/blob/master/LICENSE
 [npm-version-badge]:    https://badge.fury.io/js/swagger-compare.svg
 [npm-downloads-badge]:  https://img.shields.io/npm/dt/swagger-compare.svg?style=flat
 [npm-page]:             https://www.npmjs.com/package/swagger-compare
