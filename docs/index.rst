@@ -19,7 +19,7 @@ give it a try!
 
 .. code-block:: bash
 
-  swagger-compare https://raw.githubusercontent.com/kjjuno/swagger-compare/master/test/petstore.yaml https://raw.githubusercontent.com/kjjuno/swagger-compare/master/test/petstore-new.yaml
+  docker run kjjuno/swagger-compare https://raw.githubusercontent.com/kjjuno/swagger-compare/master/test/petstore.yaml https://raw.githubusercontent.com/kjjuno/swagger-compare/master/test/petstore-new.yaml
 
 .. toctree::
    :maxdepth: 2
