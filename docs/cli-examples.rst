@@ -36,7 +36,7 @@ You should get the following type of output
 
 .. code-block:: yaml
 
-  version: 1.4.2
+  version: 1.0.0
   deprecated:
     paths:
       /v1/pet:

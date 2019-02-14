@@ -6,6 +6,18 @@
 Welcome to swagger-compare's documentation!
 ===========================================
 
+swagger-compare aims to make the job of communicating api changes easier.
+The current phase of this project deals only with endpoints that have been
+marked as deprecated. By making use of the `x-replaced-by`_ and `x-remove-on`_
+swagger extensions a clear, and automated diff summary can be generated from
+the baseline swagger, and the new swagger document.
+
+give it a try!
+
+.. code-block:: bash
+
+  swagger-compare https://raw.githubusercontent.com/kjjuno/swagger-compare/master/test/petstore.yaml https://raw.githubusercontent.com/kjjuno/swagger-compare/master/test/petstore-new.yaml
+
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
