@@ -10,13 +10,17 @@ var swagger = require('./swagger-compare');
 var args = process.argv.slice(2);
 
 async function loadFile(file) {
+  var text = null;
   try {
     if (file.startsWith('http')) {
       var ret = await axios.get(file);
-      return ret.data;
+      var buffer = new Buffer(ret.data, 'binary');
+      text = buffer.toString();
+    }
+    else {
+      text = fs.readFileSync(file, 'utf8');
     }
 
-    var text = fs.readFileSync(file, 'utf8');
     return yaml.safeLoad(text);
   } catch (e) {
     console.log(e.message['red']);
