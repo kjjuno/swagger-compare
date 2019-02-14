@@ -1,6 +1,6 @@
 {
   "name": "swagger-compare",
-  "version": "0.1.0-alpha.3",
+  "version": "0.1.0",
   "description": "Describes the difference between two versions of a swagger document",
   "main": "src/swagger-compare.js",
   "nyc": {
