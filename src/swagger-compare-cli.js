@@ -14,7 +14,7 @@ async function loadFile(file) {
   try {
     if (file.startsWith('http')) {
       var ret = await axios.get(file);
-      var buffer = new Buffer(ret.data, 'binary');
+      var buffer = Buffer.from(ret.data, 'binary');
       text = buffer.toString();
     }
     else {
