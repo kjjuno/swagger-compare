@@ -12,6 +12,9 @@ marked as deprecated. By making use of the `x-replaced-by`_ and `x-remove-on`_
 swagger extensions a clear, and automated diff summary can be generated from
 the baseline swagger, and the new swagger document.
 
+.. _x-replaced-by: https://github.com/kjjuno/swagger-extensions/blob/master/x-replaced-by.md
+.. _x-remove-on: https://github.com/kjjuno/swagger-extensions/blob/master/x-remove-on.md
+
 give it a try!
 
 .. code-block:: bash
