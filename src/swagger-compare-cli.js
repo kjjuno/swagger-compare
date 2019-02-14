@@ -4,7 +4,7 @@ var colors  = require('colors');
 var axios   = require('axios');
 var fs      = require('fs');
 var yaml    = require('js-yaml');
-var tui    = require('./tui');
+var tui     = require('./tui');
 var swagger = require('./swagger-compare');
 
 var args = process.argv.slice(2);
@@ -31,6 +31,10 @@ async function main(args) {
   var doc2 = await loadFile(options.new);
 
   var summary = swagger.compare(doc1, doc2);
+
+  if (!summary) {
+    process.exit(1);
+  }
 
   switch (options.format) {
     case 'yaml':

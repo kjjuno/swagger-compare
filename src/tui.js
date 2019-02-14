@@ -10,6 +10,7 @@ function parseArgs(args) {
     baseline: null,
     new: null,
     format: 'yaml',
+    showVersion: false,
     showHelp: false
   };
 
@@ -23,6 +24,9 @@ function parseArgs(args) {
           var value = args[i];
           options.format = value || null;
           break;
+        case '--version':
+          options.showVersion = true;
+          break;
         case '--help':
           options.showHelp = true;
           break;
@@ -32,6 +36,15 @@ function parseArgs(args) {
     } else {
       state.positional.push(arg);
     }
+  }
+
+  if (options.showHelp) {
+    showHelp(false);
+  }
+
+  if (options.showVersion) {
+    console.log(package.version);
+    process.exit();
   }
 
   switch (options.format) {
@@ -89,6 +102,7 @@ function showHelp(isError) {
   console.log("options:")
   console.log("  -f,--format      default: yaml. Must be on of [yaml|json]");
   console.log("  --help           display this help page");
+  console.log("  --version        display the version of swagger-compare");
   console.log();
   console.log("Any paths marked as deprecated that show up only in the <new>")
   console.log("document will be included in the report.")
