@@ -39,7 +39,12 @@ to non-deprecated endpoints are out of scope at this time and will be revisted a
 [x-remove-on]: https://github.com/kjjuno/swagger-extensions/blob/master/x-remove-on.md
 
 ```yaml
-version: 2.4.5                          # the latest version of the swagger document
+info:
+  title: 'api title'
+  baseline:
+    version: 2.4.5                      # the version of the baseline swagger document
+  new:
+    version: 2.4.6                      # the version of the new swagger document
 deprecated:
   paths:
     /v1/user:
