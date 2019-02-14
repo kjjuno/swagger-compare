@@ -10,7 +10,7 @@
     "lines": 99,
     "statements": 99,
     "functions": 99,
-    "branches": 99,
+    "branches": 90,
     "include": [
       "src/**/*.js"
     ],
@@ -22,7 +22,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "nyc mocha -R mocha-multi-reporters -O configFile=test/mocha.json",
+    "test": "nyc --reporter=html --reporter=text mocha -R mocha-multi-reporters -O configFile=test/mocha.json",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcover && codecov"
   },
   "repository": {

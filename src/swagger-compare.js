@@ -1,11 +1,11 @@
 const JsDiff = require('diff');
 
-module.exports.hello = function() {
-  return 'welcome to swagger-compare. This project is currently being developed. Come join the fun! https://github.com/kjjuno/swagger-compare';
-}
-
 function getSummary(doc) {
-  var summary = {};
+  var summary = {
+    deprecated: {
+      paths: {}
+    }
+  };
 
   Object.keys(doc.paths).sort().forEach(path => {
     Object.keys(doc.paths[path]).sort().forEach(verb => {
@@ -15,10 +15,9 @@ function getSummary(doc) {
         var replacedBy = endpoint['x-replaced-by'] || 'undefined';
         var removeOn = endpoint['x-remove-on'] || 'undefined';
 
-        summary.deprecated = summary.deprecated || {};
-        summary.deprecated.paths = summary.deprecated.paths || {};
         var endpointSummary = {};
-        summary.deprecated.paths[path] = endpointSummary;
+        summary.deprecated.paths[path] = summary.deprecated.paths[path] || {};
+        summary.deprecated.paths[path][verb] = endpointSummary;
 
         endpointSummary['x-replaced-by'] = replacedBy;
         endpointSummary['x-remove-on'] = removeOn;
@@ -48,8 +47,12 @@ function compare(baselineDoc, newDoc) {
   newDoc.info = newDoc.info || {};
 
   var diffSummary = {
-    version: newDoc.info.version
+    version: newDoc.info.version,
+    deprecated: {
+      paths: {}
+    }
   };
+
   Object.keys(baselineSummary.deprecated.paths).forEach(path => {
     // paths that exist in both files, but are different will be included
     // This is likely to happen if the x-replaced-by or x-remove-on attributes
@@ -59,8 +62,6 @@ function compare(baselineDoc, newDoc) {
       var diff = JsDiff.diffJson(baselineSummary.deprecated.paths[path], newSummary.deprecated.paths[path]);
 
       if (isChanged(diff)) {
-        diffSummary.deprecated = diffSummary.deprecated || {};
-        diffSummary.deprecated.paths = diffSummary.deprecated.paths || {};
         diffSummary.deprecated.paths[path] = newSummary.deprecated.paths[path];
       }
     }
@@ -70,8 +71,6 @@ function compare(baselineDoc, newDoc) {
   // marked deprecated in the new file will be included in the summary.
   Object.keys(newSummary.deprecated.paths).forEach(path => {
     if (!baselineSummary.deprecated.paths[path]) {
-      diffSummary.deprecated = diffSummary.deprecated || {};
-      diffSummary.deprecated.paths = diffSummary.deprecated.paths || {};
       diffSummary.deprecated.paths[path] = newSummary.deprecated.paths[path];
     }
   });

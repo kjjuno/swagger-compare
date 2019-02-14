@@ -1,10 +1,10 @@
 #!/usr/bin/env node
 
-var axios = require('axios');
-var fs = require('fs');
-var yaml = require('js-yaml');
+var axios   = require('axios');
+var fs      = require('fs');
+var yaml    = require('js-yaml');
+var help    = require('./help');
 var swagger = require('./swagger-compare');
-var help = require('./help');
 
 if (process.argv.length < 4) {
   help.show();
