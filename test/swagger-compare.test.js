@@ -67,4 +67,18 @@ describe('compare', function() {
 
     assert.deepEqual(actual, expected, "Unexpected format for summary object");
   });
+
+  it('returns null if file format is incorrect', function() {
+    var text = "this is not swagger";
+    var doc1 = yaml.safeLoad(text);
+    var doc2 = {
+      prop: 'random',
+      value: 'legal',
+      age: 'object'
+    };
+
+    var actual = swagger.compare(doc1, doc2);
+
+    assert.equal(actual, null, 'Should return null when input is invalid');
+  });
 });
