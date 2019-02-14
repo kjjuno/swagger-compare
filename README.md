@@ -7,8 +7,9 @@ makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api 
 | License       | [![GitHub license][license-badge]][license-url]                                                     |
 | Circle CI     | [![CircleCI][circleci-build-badge]][circleci-dashboard]                                             |
 | Code Coverage | [![Code Coverage][codecov-badge]][codecov-dashboard]                                                |
-| Documantation | [![Documentation Status][rtd-build-badge]][rtd-latest]
+| Documantation | [![Documentation Status][rtd-build-badge]][rtd-latest]                                              |
 | NPM           | [![npm version][npm-version-badge]][npm-page] [![npm downloads][npm-downloads-badge]][npm-page]     |
+| Docker        | [![Docker Size][docker-size-badge]][docker-page] [![Docker Pulls][docker-pulls-badge]][docker-page] |
 
 [circleci-build-badge]: https://circleci.com/gh/kjjuno/swagger-compare.svg?style=shield
 [circleci-dashboard]:   https://circleci.com/gh/kjjuno/swagger-compare
@@ -21,6 +22,9 @@ makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api 
 [npm-version-badge]:    https://badge.fury.io/js/swagger-compare.svg
 [npm-downloads-badge]:  https://img.shields.io/npm/dt/swagger-compare.svg?style=flat
 [npm-page]:             https://www.npmjs.com/package/swagger-compare
+[docker-size-badge]:    https://img.shields.io/microbadger/image-size/kjjuno/swagger-compare.svg?style=flat
+[docker-pulls-badge]:   https://img.shields.io/docker/pulls/kjjuno/swagger-compare.svg?style=flat
+[docker-page]:          https://hub.docker.com/r/kjjuno/swagger-compare
 
 This tool is currently in the design phase. The goal is to provide a clear and concise way to communicate api changes.
 Ideally this will fit easily within a slack or Teams channel.
