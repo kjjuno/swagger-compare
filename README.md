@@ -29,8 +29,6 @@ makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api 
 [docker-pulls-badge]:   https://img.shields.io/docker/pulls/kjjuno/swagger-compare.svg?style=flat
 [docker-page]:          https://hub.docker.com/r/kjjuno/swagger-compare
 
-## cli example
-
 ```
 npm install -g swagger-compare
 ```
