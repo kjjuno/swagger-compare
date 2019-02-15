@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 
 var colors  = require('colors');
-var axios   = require('axios');
+var http    = require('http');
+var https   = require('https');
 var fs      = require('fs');
 var yaml    = require('js-yaml');
 var tui     = require('./tui');
@@ -9,13 +10,33 @@ var swagger = require('./swagger-compare');
 
 var args = process.argv.slice(2);
 
+
 async function loadFile(file) {
   var text = null;
   try {
-    if (file.startsWith('http')) {
-      var ret = await axios.get(file);
-      var buffer = Buffer.from(ret.data, 'binary');
-      text = buffer.toString();
+    if (file.startsWith('https')) {
+      var promise = new Promise((resolve, reject) => {
+        https.get(file, function(res) {
+          res.on('data', d => {
+            resolve(d.toString());
+          });
+        }).on('error', e => {
+          reject(e);
+        });
+      });
+      text = await promise;
+    }
+    else if (file.startsWith('http')) {
+      var promise = new Promise((resolve, reject) => {
+        http.get(file, function(res) {
+          res.on('data', d => {
+            resolve(d.toString());
+          });
+        }).on('error', e => {
+          reject(e);
+        });
+      });
+      text = await promise;
     }
     else {
       text = fs.readFileSync(file, 'utf8');

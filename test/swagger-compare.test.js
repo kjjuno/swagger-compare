@@ -1,5 +1,4 @@
 const assert  = require('assert');
-var axios     = require('axios');
 var fs        = require('fs');
 var yaml      = require('js-yaml');
 const swagger = require('../src/swagger-compare');
