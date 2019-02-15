@@ -28,5 +28,4 @@ give it a try!
    cli-examples
    code-examples
    swagger-extensions
-   contributing
    writing-documentation
