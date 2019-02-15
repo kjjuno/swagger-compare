@@ -17,8 +17,12 @@ async function loadFile(file) {
     if (file.startsWith('https')) {
       var promise = new Promise((resolve, reject) => {
         https.get(file, function(res) {
+          var text = '';
           res.on('data', d => {
-            resolve(d.toString());
+            text += d.toString();
+          });
+          res.on('end', () => {
+            resolve(text);
           });
         }).on('error', e => {
           reject(e);
@@ -29,8 +33,12 @@ async function loadFile(file) {
     else if (file.startsWith('http')) {
       var promise = new Promise((resolve, reject) => {
         http.get(file, function(res) {
+          var text = '';
           res.on('data', d => {
-            resolve(d.toString());
+            text += d.toString();
+          });
+          res.on('end', () => {
+            resolve(text);
           });
         }).on('error', e => {
           reject(e);
