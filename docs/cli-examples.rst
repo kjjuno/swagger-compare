@@ -23,7 +23,7 @@ Quick Start
 
 Let's say you have an api hosted at https://my-api/swagger/v1/sagger.json
 
-You have a build server that has just build something from your ``master`` branch
+You have a build server that has just built something from your ``master`` branch
 and now you want to compare the new swagger to the deployed swagger.
 
 Add this line to your build script:
