@@ -18,7 +18,7 @@ x-remove-on
 
 The `x-remove-on`_ extension communicated the
 date when a deprecated endpoint is scheduled to be removed. This helps consumers
-Know when they need to have migrated to the new endpoint to avoid an outage.
+know when they need to have migrated to the new endpoint to avoid an outage.
 
 .. _x-replaced-by: https://github.com/kjjuno/swagger-extensions/blob/master/x-replaced-by.md
 .. _x-remove-on: https://github.com/kjjuno/swagger-extensions/blob/master/x-remove-on.md
