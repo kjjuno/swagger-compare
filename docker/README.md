@@ -6,5 +6,5 @@
 
 ## Usage
 ```
-docker run --rm [baseline] [new]
+docker run --rm kjjuno/swagger-compare [baseline] [new]
 ```
