@@ -2,4 +2,4 @@
 
 ## Tags
 
-[latest](https://github.com/kjjuno/swagger-compare/blob/master/docker/Dockerfile)
+[latest (Dockerfile)](https://github.com/kjjuno/swagger-compare/blob/master/docker/Dockerfile)
