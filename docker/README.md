@@ -3,3 +3,8 @@
 ## Tags
 
 [latest (Dockerfile)](https://github.com/kjjuno/swagger-compare/blob/master/docker/Dockerfile)
+
+## Usage
+```
+docker run --rm [baseline] [new]
+```
