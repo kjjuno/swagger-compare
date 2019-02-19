@@ -30,8 +30,17 @@ Provides a concise summary of api changes by making use of [x-replaced-by] and [
 [docker-page]:          https://hub.docker.com/r/kjjuno/swagger-compare
 
 ## Installation
+
+### npm
+
 ```
 npm install -g swagger-compare
+```
+
+### Docker
+
+```
+docker pull kjjuno/swagger-compare
 ```
 
 ## Usage
