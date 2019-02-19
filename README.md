@@ -1,9 +1,9 @@
 # swagger-compare
 
-makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api changes.
+Provides a concise summary of api changes by making use of [x-replaced-by] and [x-remove-on]
 
-[x-replaced-by]:        https://github.com/kjjuno/swagger-extensions/blob/master/x-replaced-by.md
-[x-remove-on]:          https://github.com/kjjuno/swagger-extensions/blob/master/x-remove-on.md
+[x-replaced-by]: https://github.com/kjjuno/swagger-extensions/blob/master/x-replaced-by.md
+[x-remove-on]:   https://github.com/kjjuno/swagger-extensions/blob/master/x-remove-on.md
 
 | Platform      | Badges                                                                                              |
 | :------------ | :-------------------------------------------------------------------------------------------------- |
@@ -29,10 +29,31 @@ makes use of [x-replaced-by] and [x-remove-on] provide a concise summary of api 
 [docker-pulls-badge]:   https://img.shields.io/docker/pulls/kjjuno/swagger-compare.svg?style=flat
 [docker-page]:          https://hub.docker.com/r/kjjuno/swagger-compare
 
+## Installation
 ```
 npm install -g swagger-compare
 ```
 
+## Usage
+
+```
+swagger-compare [options] <baseline> <new>
+{version}
+
+arguments:
+  baseline         path or url to baseline swagger document
+  new              path or url to new swagger document
+
+options:
+  -f,--format      default: yaml. Must be on of [yaml|json]
+  --help           display this help page
+  --version        display the version of swagger-compare
+
+Any paths marked as deprecated that show up only in the <new>
+document will be included in the report.
+```
+
+## Example
 ```
 swagger-compare https://raw.githubusercontent.com/kjjuno/swagger-compare/master/test/petstore.yaml https://raw.githubusercontent.com/kjjuno/swagger-compare/master/test/petstore-new.yaml
 ```
